@@ -1,0 +1,205 @@
+/* SolarScan — Global Styles */
+
+/* ── fonts & base ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ── hide default streamlit chrome ── */
+#MainMenu, footer, header { visibility: hidden; }
+.block-container { padding-top: 1.5rem !important; padding-bottom: 2rem !important; }
+
+/* ── sidebar ── */
+[data-testid="stSidebar"] {
+    background: #0f1117 !important;
+    border-right: 1px solid #1e2130;
+}
+[data-testid="stSidebar"] .stButton button {
+    background: transparent !important;
+    border: none !important;
+    color: #9ca3af !important;
+    text-align: left !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    transition: all .15s;
+    width: 100%;
+}
+[data-testid="stSidebar"] .stButton button:hover {
+    background: #1e2130 !important;
+    color: #f9fafb !important;
+}
+.sidebar-logo {
+    display: flex; align-items: center; gap: 10px;
+    padding: 4px 4px 8px;
+}
+.logo-icon { font-size: 24px; }
+.logo-title { font-size: 15px; font-weight: 600; color: #f9fafb; }
+.logo-sub   { font-size: 11px; color: #6b7280; }
+
+/* ── page header ── */
+.page-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+.page-title  { font-size: 20px; font-weight: 600; color: #f9fafb; margin: 0; }
+.page-sub    { font-size: 12px; color: #6b7280; margin-top: 2px; }
+
+/* ── cards ── */
+.ss-card {
+    background: #1a1f2e;
+    border: 1px solid #2a3045;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 12px;
+}
+.card-label {
+    font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: #6b7280; margin-bottom: 10px;
+}
+
+/* ── stat cards ── */
+.stat-grid { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.stat-card {
+    background: #1a1f2e; border: 1px solid #2a3045;
+    border-radius: 10px; padding: 12px 16px; flex: 1; min-width: 100px;
+}
+.stat-num  { font-size: 26px; font-weight: 600; color: #f9fafb; line-height: 1.1; }
+.stat-lbl  { font-size: 11px; color: #6b7280; margin-top: 3px; }
+
+/* ── severity badges ── */
+.badge {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    padding: 2px 8px; border-radius: 10px; letter-spacing: .04em;
+}
+.badge-high { background: #3d1515; color: #f87171; border: 1px solid #7f1d1d; }
+.badge-med  { background: #3d2c0a; color: #fbbf24; border: 1px solid #78350f; }
+.badge-low  { background: #0f2d1a; color: #4ade80; border: 1px solid #14532d; }
+.badge-ok   { background: #0d2235; color: #38bdf8; border: 1px solid #0c4a6e; }
+
+/* ── upload zone ── */
+.upload-hint {
+    border: 1.5px dashed #2a3045; border-radius: 10px;
+    padding: 1.5rem; text-align: center; background: #131720;
+    color: #6b7280; font-size: 13px; margin-bottom: 12px;
+}
+
+/* ── defect result row ── */
+.defect-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 8px;
+    background: #131720; border: 1px solid #2a3045;
+    margin-bottom: 7px;
+}
+.defect-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.dot-high { background: #ef4444; }
+.dot-med  { background: #f59e0b; }
+.dot-low  { background: #22c55e; }
+.defect-name { font-size: 13px; font-weight: 500; color: #e5e7eb; flex: 1; }
+.defect-conf { font-size: 11px; color: #6b7280; }
+
+/* ── notification ── */
+.notif-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 14px; border-radius: 10px;
+    background: #1a1f2e; border: 1px solid #2a3045;
+    margin-bottom: 8px;
+}
+.notif-icon {
+    width: 30px; height: 30px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0;
+}
+.notif-high { background: #3d1515; }
+.notif-med  { background: #3d2c0a; }
+.notif-ok   { background: #0f2d1a; }
+.notif-title { font-size: 13px; font-weight: 500; color: #e5e7eb; margin-bottom: 2px; }
+.notif-msg   { font-size: 11px; color: #6b7280; }
+.notif-read  { opacity: 0.5; }
+
+/* ── map grid ── */
+.map-wrap {
+    display: grid;
+    gap: 4px;
+    padding: 14px;
+    background: #131720;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.map-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #9ca3af; }
+.legend-dot  { width: 10px; height: 10px; border-radius: 3px; }
+
+/* ── progress bar ── */
+.prog-wrap { flex: 1; height: 5px; background: #2a3045; border-radius: 3px; overflow: hidden; }
+.prog-fill { height: 100%; border-radius: 3px; background: #1D9E75; }
+
+/* ── file row ── */
+.file-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 8px;
+    background: #131720; border: 1px solid #2a3045;
+    margin-bottom: 6px; font-size: 12px; color: #e5e7eb;
+}
+
+/* ── compare panels ── */
+.compare-header {
+    font-size: 11px; font-weight: 600; color: #6b7280;
+    padding: 7px 10px; background: #131720;
+    border-bottom: 1px solid #2a3045; border-radius: 8px 8px 0 0;
+    text-transform: uppercase; letter-spacing: .05em;
+}
+.compare-box {
+    border: 1px solid #2a3045; border-radius: 8px; overflow: hidden; margin-bottom: 8px;
+}
+
+/* ── chart bars ── */
+.bar-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 0; border-bottom: 1px solid #1e2130;
+}
+.bar-row:last-child { border: none; }
+.bar-label { font-size: 12px; color: #d1d5db; width: 150px; flex-shrink: 0; }
+.bar-track { flex: 1; height: 6px; background: #2a3045; border-radius: 3px; overflow: hidden; }
+.bar-fill-red    { height: 100%; background: #ef4444; border-radius: 3px; }
+.bar-fill-amber  { height: 100%; background: #f59e0b; border-radius: 3px; }
+.bar-fill-green  { height: 100%; background: #22c55e; border-radius: 3px; }
+.bar-count { font-size: 11px; color: #6b7280; width: 24px; text-align: right; }
+
+/* ── action buttons ── */
+.ss-btn {
+    display: inline-block; font-size: 12px; font-weight: 500;
+    padding: 6px 14px; border-radius: 7px; cursor: pointer;
+    border: 1px solid #2a3045; background: #1a1f2e; color: #9ca3af;
+    transition: all .15s; margin-right: 6px;
+}
+.ss-btn:hover { background: #2a3045; color: #f9fafb; }
+.ss-btn-primary {
+    background: #1D9E75 !important; border-color: #1D9E75 !important;
+    color: white !important;
+}
+
+/* ── streamlit widget overrides ── */
+.stSlider > div > div { background: #2a3045 !important; }
+.stFileUploader > div { background: #131720 !important; border-color: #2a3045 !important; }
+div[data-testid="stFileUploadDropzone"] {
+    background: #131720 !important;
+    border: 1.5px dashed #2a3045 !important;
+    border-radius: 10px !important;
+}
+.stButton > button {
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: all .15s !important;
+}
+.stButton > button[kind="primary"] {
+    background: #1D9E75 !important;
+    border-color: #1D9E75 !important;
+    color: white !important;
+}
+
+/* ── divider ── */
+hr { border-color: #1e2130 !important; margin: 1rem 0 !important; }

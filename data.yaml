@@ -1,0 +1,34 @@
+# SolarScan — Dataset Configuration
+# Auto-generated — place this file inside your dataset2/ folder
+# Folder layout expected:
+#   dataset2/
+#     data.yaml          ← this file
+#     train/images/
+#     train/labels/
+#     valid/images/
+#     valid/labels/
+#     test/images/
+#     test/labels/
+
+path: dataset2
+
+train: train/images
+val:   valid/images
+test:  test/images
+
+nc: 7
+names:
+  - Hotspot
+  - Junction_box
+  - Mild
+  - Moderate
+  - Moderate-Critical
+  - Moderate-High
+  - healthy_panel
+
+roboflow:
+  workspace: solarpvdefect
+  project: fyp-ezwbm
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/solarpvdefect/fyp-ezwbm/dataset/2
